@@ -1,0 +1,15 @@
+.page-header
+  = link_to account_transactions_path, class: 'btn btn-default' do
+    %span.glyphicon.glyphicon-list-alt
+    Back
+  = link_to edit_account_transaction_path(@account_transaction), class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-pencil
+    Edit
+  %h1 Show account_transaction
+%dl.dl-horizontal
+  %dt Amount:
+  %dd= @account_transaction.amount
+  %dt Transaction type:
+  %dd= @account_transaction.transaction_type
+  %dt Bank account:
+  %dd= @account_transaction.bank_account

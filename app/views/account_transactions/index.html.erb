@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_account_transaction_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Account transaction
+  <% end %>
+  <h1>Listing account_transactions</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Amount</th>
+            <th>Transaction type</th>
+            <th>Bank account</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @account_transactions) do |account_transaction| %>
+            <td><%= account_transaction.amount %></td>
+            <td><%= account_transaction.transaction_type %></td>
+            <td><%= account_transaction.bank_account %></td>
+            <td><%= link_to 'Show', account_transaction %></td>
+        <td><%= link_to 'Edit', edit_account_transaction_path(account_transaction) %></td>
+        <td><%= link_to 'Destroy', account_transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

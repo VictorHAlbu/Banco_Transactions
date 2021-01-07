@@ -1,0 +1,13 @@
+<div class="page-header">
+  <%= link_to bank_accounts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to @bank_account, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-info-sign"></span>
+    Show
+  <% end %>
+  <h1>Editing bank_account</h1>
+</div>
+
+<%= render partial: "form", locals: { bank_account: @bank_account }%>

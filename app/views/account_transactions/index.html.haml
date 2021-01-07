@@ -1,0 +1,23 @@
+.page-header
+  = link_to new_account_transaction_path, class: 'btn btn-primary' do
+    %span.glyphicon.glyphicon-plus
+    New Account transaction
+  %h1 Listing account_transactions
+.table-responsive
+  %table.table.table-striped.table-bordered.table-hover
+    %thead
+      %tr
+        %th Amount
+        %th Transaction type
+        %th Bank account
+        %th
+        %th
+        %th
+    %tbody
+      = content_tag_for(:tr, @account_transactions) do |account_transaction|
+        %td= account_transaction.amount
+        %td= account_transaction.transaction_type
+        %td= account_transaction.bank_account
+        %td= link_to 'Show', account_transaction
+        %td= link_to 'Edit', edit_account_transaction_path(account_transaction)
+        %td= link_to 'Destroy', account_transaction, method: :delete, data: { confirm: 'Are you sure?' }

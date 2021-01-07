@@ -1,0 +1,27 @@
+= form_for(@account_transaction, html: { class: "form-horizontal", role: "form" }) do |f|
+  - if @account_transaction.errors.any?
+    .alert.alert-danger.alert-dismissable{:role => "alert"}
+      %button.close{"data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+        %span.sr-only Close
+      %h4
+        = pluralize(@account_transaction.errors.count, "error")
+        prohibited this account_transaction from being saved:
+      %ul
+        - @account_transaction.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :amount, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_field :amount, class: "form-control"
+  .form-group
+    = f.label :transaction_type, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_field :transaction_type, class: "form-control"
+  .form-group
+    = f.label :bank_account, class: "col-sm-2 control-label"
+    .col-sm-10
+      = f.text_field :bank_account, class: "form-control"
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      = f.submit class: "btn btn-primary"

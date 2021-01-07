@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to account_transactions_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_account_transaction_path(@account_transaction), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show account_transaction</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Amount:</dt>
+  <dd><%= @account_transaction.amount %></dd>
+
+  <dt>Transaction type:</dt>
+  <dd><%= @account_transaction.transaction_type %></dd>
+
+  <dt>Bank account:</dt>
+  <dd><%= @account_transaction.bank_account %></dd>
+
+</dl>
