@@ -7,7 +7,8 @@ application up and running.
 Applicação desenvolvida com Ruby on Rails
 Rails 6.0.3 e Ruby 2.5.8
 No Front-end usei o Boootstrap
-
+Banco de dados Mysql
+Usei também o AccountTransaction 
 Things you may want to cover:
 
 * Ruby version
