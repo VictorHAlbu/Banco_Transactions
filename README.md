@@ -1,8 +1,7 @@
 # README
 
 This README would normally document whatever steps are necessary to get the
-application up and running.
- APLLICAÇÃO DE TRANSAÇÕES DE BANCÁRIA 
+ APLICAÇÃO DE TRANSAÇÕES BANCÁRIAS
 
 Applicação desenvolvida com Ruby on Rails
 Rails 6.0.3 e Ruby 2.5.8
